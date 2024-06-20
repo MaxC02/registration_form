@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Registration</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+	<div class="container">
+		<h2>Customer Registration</h2>
+		<form th:action="@{/registration}" th:object="${customer}"
+			action="/registration" method="post" onsubmit="return validateForm()">
+			<div class="form-group">
+				<label for="title">Title</label> <input type="text" id="title"
+					class="form-control" th:field="*{title}" maxlength="5" required />
+			</div>
+			<div class="form-group">
+				<label for="firstName">First Name</label> <input type="text"
+					id="firstName" class="form-control" th:field="*{firstName}"
+					maxlength="50" required />
+			</div>
+			<div class="form-group">
+				<label for="lastName">Last Name</label> <input type="text"
+					id="lastName" class="form-control" th:field="*{lastName}"
+					maxlength="50" required />
+			</div>
+			<div class="form-group">
+				<label for="emailAddress">Email Address</label> <input type="email"
+					id="emailAddress" class="form-control" th:field="*{emailAddress}"
+					maxlength="255" required />
+			</div>
+			<div class="form-group">
+				<label for="addressLine1">Address Line 1</label> <input type="text"
+					id="addressLine1" class="form-control" th:field="*{addressLine1}"
+					maxlength="255" required />
+			</div>
+			<div class="form-group">
+				<label for="addressLine2">Address Line 2</label> <input type="text"
+					id="addressLine2" class="form-control" th:field="*{addressLine2}"
+					maxlength="255" />
+			</div>
+			<div class="form-group">
+				<label for="city">City</label> <input type="text" id="city"
+					class="form-control" th:field="*{city}" maxlength="255" />
+			</div>
+			<div class="form-group">
+				<label for="postcode">Postcode</label> <input type="text"
+					id="postcode" class="form-control" th:field="*{postcode}"
+					maxlength="10" required />
+			</div>
+			<div class="form-group">
+				<label for="phoneNumber">Phone Number</label> <input type="text"
+					id="phoneNumber" class="form-control" th:field="*{phoneNumber}"
+					maxlength="20" />
+			</div>
+			<button type="submit" class="btn btn-primary">Register</button>
+		</form>
+	</div>
+	<script>
+	// Check for non-numerical input, if detected, replace input with blank space
+	document.getElementById('phoneNumber').addEventListener('input', function(event) {
+        var input = event.target.value;
+        event.target.value = input.replace(/\D/g, '');
+    });
+	
+	// Completes validation
+		function validateForm() {
+		
+		return true;
+	}
+	</script>
+</body>
+</html>

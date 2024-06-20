@@ -1,0 +1,147 @@
+/* Reset some default styles */
+body, h1, p, input, select, button {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+/* Set background and container styles */
+body {
+	background: linear-gradient(to right, #240487, #ACB6E5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: #333;
+}
+
+.container {
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 500px;
+	text-align: center;
+	animation: fadeIn 1s ease-in-out;
+}
+
+
+keyframes fadeIn {from { opacity:0;
+	transform: translateY(-10px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+h1 {
+	margin-bottom: 20px;
+	color: #333;
+}
+
+/* Style the form and its elements */
+.registration-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.form-group label {
+	margin-bottom: 5px;
+	color: #666;
+}
+
+.form-group input, .form-group select {
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	font-size: 16px;
+	color: #333;
+	transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+	border-color: #007BFF;
+}
+
+.submit-button {
+	padding: 15px;
+	background-color: #007BFF;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+	background-color: #0056b3;
+	transform: translateY(-2px);
+}
+
+.submit-button:active {
+	background-color: #003f7f;
+	transform: translateY(0);
+}
+
+/* Success Page Styles */
+.success-container {
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	animation: fadeIn 1s ease-in-out;
+}
+
+.success-icon {
+	font-size: 50px;
+	color: #4CAF50;
+	margin-bottom: 20px;
+}
+
+.success-container h1 {
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.success-container p {
+	color: #666;
+	font-size: 18px;
+}
+
+/* Success Page Styles */
+.error-container {
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	animation: fadeIn 1s ease-in-out;
+}
+
+.error-icon {
+	font-size: 50px;
+	color: #ff0000;
+	margin-bottom: 20px;
+}
+
+.error-container h1 {
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.error-container p {
+	color: #666;
+	font-size: 18px;
+}
